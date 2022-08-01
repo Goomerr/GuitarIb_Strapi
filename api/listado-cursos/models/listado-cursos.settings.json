@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "listado_cursos",
+  "info": {
+    "name": "Listado Cursos"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "descripcion": {
+      "type": "richtext",
+      "required": true
+    },
+    "imagen": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "inicio": {
+      "required": true,
+      "type": "date"
+    },
+    "fin": {
+      "type": "date",
+      "required": true
+    }
+  }
+}
