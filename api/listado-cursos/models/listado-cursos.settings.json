@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "listado_cursos",
   "info": {
-    "name": "Listado Cursos"
+    "name": "Listado Cursos",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -36,6 +37,10 @@
     "fin": {
       "type": "date",
       "required": true
+    },
+    "url": {
+      "type": "uid",
+      "targetField": "nombre"
     }
   }
 }
